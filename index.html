@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form novalidate action="">
+    <div>
+      <label for="mail">Email:</label>
+      <input type="email" name="mail" id="mail" required>
+      <span id='mailError'></span>
+    </div>   
+    <div>
+      <label for="country">Country:</label>
+      <input type="text" name="country" id="country" required>
+      <span id="countryError"></span>
+    </div> 
+    <div>
+      <label for="postalCode">Postal Code:</label>
+      <input type="text" name="postalCode" id="postalCode" required pattern="[a-zA-Z][0-9][a-zA-Z]\s?[0-9][a-zA-Z][0-9]">
+      <span id="postalCodeError"></span>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required minlength="8">
+      <span id="passwordError"></span>
+    </div>
+    <div>
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" name="confirmPassword" id="confirmPassword" required>
+      <span id="confirmPasswordError"></span>
+    </div>
+    <div>
+      <button id="submitButton">Submit</button>
+      <span id="submitError"></span>
+    </div>
+  </form>
+</body>
+<script src="main.js"></script>
+</html>
